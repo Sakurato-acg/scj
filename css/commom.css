@@ -1,6 +1,7 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 html {
@@ -8,27 +9,42 @@ html {
 }
 body {
   display: flex;
+  min-height: 100%;
+  padding-top: 4rem;
   flex-direction: column;
-  justify-content: space-between;
-  height: 100%;
   background: #000 url(../imgs/background-night.png) top center fixed;
+  font-family: pingfang sc, hiragino sans gb, microsoft yahei, "sans-serif";
+}
+html,
+body {
+  height: 100%;
 }
 @media screen and (max-width: 768px) {
   html {
     font-size: 14px;
   }
 }
+@media screen and (max-width: 1920px) {
+  html {
+    font-size: 16px;
+  }
+}
+@media screen and (min-width: 1920px) {
+  html {
+    font-size: 18px;
+  }
+}
 
 header {
-  position: fixed;
   left: 0;
   top: 0;
+  right: 0;
+  z-index: 2;
   display: flex;
-  justify-content: space-between;
+  position: fixed;
   width: 100%;
   height: 4rem;
   background-color: #373737;
-  font-family: pingfang sc, hiragino sans gb, microsoft yahei, "sans-serif";
 }
 .head-logo {
   height: 100%;
@@ -38,6 +54,9 @@ header {
 .head-logo svg {
   width: 100%;
   height: 100%;
+}
+.head-logo svg {
+  height: 3em;
 }
 @media screen and (max-width: 600px) {
   .head-logo {
@@ -50,7 +69,7 @@ header {
     text-align: center;
   }
 }
-@media (max-width: 600px) {
+@media screen and (max-width: 600px) {
   .hidden-xs {
     display: none !important;
   }
@@ -61,7 +80,7 @@ header {
     display: block;
     content: "\f0c9";
     font-family: FontAwesome;
-    font-size: 1.25em;
+    font-size: 1.25rem;
   }
   .head-toggle {
     display: flex;
@@ -76,14 +95,17 @@ header {
   display: flex;
   align-items: center;
   margin: 0 auto;
-  background-color: pink;
+  /* background-color: pink; */
+  font-size: 1 rem;
 }
 .head-menu > a,
 .has-child > a {
-  padding: 0 1em;
+  padding: 0 1rem;
   line-height: 4em;
 }
-
+.head-menu i {
+  padding-right: 0.5rem;
+}
 .head-social {
   width: 4em;
   display: flex;
@@ -94,14 +116,59 @@ header {
 }
 
 .head-social a {
-  font-size: 1.2em;
+  font-size: 1.5rem;
   margin-right: 1rem;
 }
-
 footer {
+  display: flex;
+  justify-content: center;
+  position: relative;
   width: 100%;
-  /* position: absolute; */
-  /* bottom: 0; */
-  background-color: #1f8f93;
-  /* background: url(../imgs/footer.png) top/cover; */
+  /* color: white; */
+  /* padding: 10vw 0 2rem; */
+  padding: 10vw 0 2rem;
+}
+footer::before {
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  content: "";
+  z-index: -1;
+  position: absolute;
+  background: url(../imgs/footer.png) top/cover no-repeat;
+}
+.wrap {
+  max-width: 75rem;
+  padding: 0 1.25rem;
+  /* background-color: #1f8f93; */
+}
+.wrap .row {
+  display: flex;
+  flex-direction: column;
+  /* justify-content: space-around; */
+  row-gap: 2rem;
+  text-align: center;
+}
+.wrap .row,
+.wrap .row div a {
+  color: #fff;
+}
+
+@media screen and (min-width: 900px) {
+  footer .wrap {
+    width: 100%;
+  }
+  footer .wrap .row {
+    flex-direction: row;
+  }
+  footer .wrap .row div {
+    flex: 1;
+  }
+  footer .wrap .row div:first-child {
+    text-align: left;
+  }
+  footer .wrap .row div:last-child {
+    text-align: right;
+  }
 }

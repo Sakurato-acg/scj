@@ -1,4 +1,25 @@
 a {
   text-decoration: none !important;
-  color: #a97f70 !important;
+  color: #a97f70;
+}
+/* 清除浮动 */
+.clearfix:after {
+  visibility: hidden;
+  clear: both;
+  display: block;
+  content: ".";
+  height: 0;
+}
+
+.clearfix {
+  *zoom: 1;
+}
+img,
+svg,
+audio,
+video,
+iframe {
+  width: 100%;
+  max-width: 100%;
+  vertical-align: middle;
 }

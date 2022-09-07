@@ -1,0 +1,68 @@
+main {
+  width: 100%;
+  flex: 1 1 auto;
+  margin: 0 auto;
+  max-width: 70rem;
+  padding: 3rem 1.25rem;
+}
+main nav {
+  display: flex;
+  justify-content: center;
+  margin: 0 -1.25rem;
+  margin-bottom: 2.5rem;
+}
+main nav a {
+  display: block;
+  padding: 0.45rem 1rem;
+  border-radius: 2rem;
+  transition: color 0.3s, background 0.3s, transform 0.3s;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+main nav .active {
+  background: #28b9be;
+  color: white !important;
+}
+main nav a:hover {
+  color: white !important;
+  background-color: #ffc107;
+}
+main .list {
+  text-align: center;
+}
+main .list .row {
+  display: flex;
+  row-gap: 2rem;
+  margin: 0 -1rem;
+  flex-wrap: wrap;
+}
+main .list .row .col-4 {
+  flex: 0 0 33.3333%;
+  max-width: 33.3333%;
+}
+main .list .row > [class*="col-"] {
+  padding: 0 1rem;
+}
+main .list img {
+  border-radius: 30%;
+}
+main .list h3,
+main .list h4 {
+  margin-top: 1rem;
+}
+@media screen and (min-width: 1920px) {
+  main .list .row.auto > [class*="col-"] {
+    padding: 0 1.25rem;
+  }
+}
+@media screen and (min-width: 900px) {
+  main .list .row .col-m-2 {
+    flex: 0 0 16.6666% !important;
+    max-width: 16.6666% !important;
+  }
+}
+@media screen and (min-width: 600px) {
+  main .list .row .col-s-3 {
+    flex: 0 0 25%;
+    max-width: 25%;
+  }
+}
