@@ -44,6 +44,7 @@ main .list .row > [class*="col-"] {
 }
 main .list img {
   border-radius: 30%;
+  size: 90px 90px;
 }
 main .list h3,
 main .list h4 {
