@@ -173,3 +173,10 @@ footer::before {
     text-align: right;
   }
 }
+.music {
+  position: fixed;
+  bottom: 10vh;
+  right: 0;
+  width: 19.375rem;
+  height: 6.875rem;
+}
