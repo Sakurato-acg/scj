@@ -1,0 +1,29 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="content-type" content="text/html;charset=gb2312" />
+    <title>JS小测试</title>
+  </head>
+
+  <body>
+    <style type="text/css">
+      #time {
+        background-color: #eee;
+      }
+    </style>
+    <script type="text/javascript">
+      			function showtime()
+      			{
+      				var myDate = new Date();
+      				document.getElementById("time").innerHTML = myDate.getHours() + "时" + myDate.getMinutes() + "分" 				+ myDate.getSeconds() + "秒" ;
+      				setTimeout("showtime()",1000);
+      /			}
+    </script>
+
+    <div id="time">
+      <script type="text/javascript">
+        showtime();
+      </script>
+    </div>
+  </body>
+</html>
