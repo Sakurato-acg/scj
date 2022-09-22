@@ -5,6 +5,14 @@ main {
   max-width: 70rem;
   padding: 3rem 1.25rem;
   // background-color: red;
+  #time {
+    width: 100%;
+    // background-color: #ffc107;
+    text-align: center;
+    padding-bottom: 1.875rem;
+    color: #a97f70;
+    font-size: 1.875rem;
+  }
   nav {
     display: flex;
     justify-content: center;
@@ -18,13 +26,14 @@ main {
       border-radius: 2rem;
       transition: color 0.3s, background 0.3s, transform 0.3s;
       transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+      // color: white;
     }
     .active {
       background: #28b9be;
-      color: white !important;
+      // color: white !important;
     }
     a:hover {
-      color: white !important;
+      // color: white !important;
       background-color: #ffc107;
     }
   }
@@ -36,6 +45,8 @@ main {
       row-gap: 2rem;
       margin: 0 -1rem;
       flex-wrap: wrap;
+      // overflow: hidden;
+
       .col-4 {
         flex: 0 0 33.3333%;
         max-width: 33.3333%;
@@ -46,7 +57,12 @@ main {
       padding: 0 1rem;
       // max-width: 100%;
     }
-
+    .row div {
+      transition: all 0.3s;
+    }
+    .row div:hover {
+      margin-top: -1.25rem;
+    }
     img {
       border-radius: 30%;
       size: 90px 90px;

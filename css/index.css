@@ -5,6 +5,13 @@ main {
   max-width: 70rem;
   padding: 3rem 1.25rem;
 }
+main #time {
+  width: 100%;
+  text-align: center;
+  padding-bottom: 1.875rem;
+  color: #a97f70;
+  font-size: 1.875rem;
+}
 main nav {
   display: flex;
   justify-content: center;
@@ -20,10 +27,8 @@ main nav a {
 }
 main nav .active {
   background: #28b9be;
-  color: white !important;
 }
 main nav a:hover {
-  color: white !important;
   background-color: #ffc107;
 }
 main .list {
@@ -41,6 +46,12 @@ main .list .row .col-4 {
 }
 main .list .row > [class*="col-"] {
   padding: 0 1rem;
+}
+main .list .row div {
+  transition: all 0.3s;
+}
+main .list .row div:hover {
+  margin-top: -1.25rem;
 }
 main .list img {
   border-radius: 30%;
