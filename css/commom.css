@@ -2,18 +2,22 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  cursor: url("../imgs/cur/Cursor_Normal_64.png"), pointer;
 }
 
 html {
   font-size: 16px;
 }
 body {
+  position: relative;
   display: flex;
   min-height: 100%;
   padding-top: 4rem;
   flex-direction: column;
   background: #000 url(../imgs/background-light.png) top center fixed;
   font-family: pingfang sc, hiragino sans gb, microsoft yahei, "sans-serif";
+
+  /* cursor: url("../imgs/cur/Cursor_Click_64.png"), alias; */
 }
 html,
 body {

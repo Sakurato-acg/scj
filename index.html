@@ -4,7 +4,6 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
     <title>Document</title>
     <link rel="stylesheet" href="css/commom.css" />
     <link rel="stylesheet" href="css/normalize.css" />
@@ -12,6 +11,7 @@
     <link rel="stylesheet" href="css/index.css">
     <!-- <link rel="stylesheet" href="bootstrap/css/bootstrap.css"> -->
     <!-- <script src="js/flexible.js"></script> -->
+    <script src="js/move.js"></script>
   </head>
   <body>
     <header  class="">
@@ -132,20 +132,20 @@
 			<script type="text/javascript"></script>
       </div>
       <nav class="nav">
-          <a href="#" class="active change" data-paul-state="" onmouseover="changeCss(this)" >精选</a>
+          <a href="#" class="active change" data-paul-state="" onmouseover="changeCss(this)" onmouseout="leave(this)" >精选</a>
           <a href="#" data-paul-state="" class="change" onmouseover="changeCss(this)" onmouseout="leave(this)">网站</a>
           <a href="#" data-paul-state="" class="change" onmouseover="changeCss(this)" onmouseout="leave(this)">软件</a>
       </nav>
 <!--  -->
       <section class="list ">
-        <div class="row">
+         <div class="row">
           <!-- NO.1 -->
           <div class="col-4 col-s-3 col-m-2">
-      <a href="https://dongmanhuayuan.myheartsite.com/" data-paul-state="">
+              <a href="https://dongmanhuayuan.myheartsite.com/" data-paul-state="">
           <img src="upload/1.png">
           <h4>动漫花园资源网</h4>
       </a>
-  </div>
+        </div>
           <!-- NO.2 -->
           <div class="col-4 col-s-3 col-m-2">
       <a href="https://zh.moegirl.org.cn/GANGAN_GA%E9%A2%91%E9%81%93#%E8%8A%82%E7%9B%AE%E8%A1%A8" data-paul-state="">
@@ -218,13 +218,58 @@
   </div>
           <!-- NO.12 -->
           <div class="col-4 col-s-3 col-m-2">
-      <a href="https://www.bilibili.com/" data-paul-state="">
-          <img src="upload/bilibili.png">
+      <a href="https://www.bilibili.com/">
+          <!-- <img src="upload/bilibili.png"> -->
+          <img src="http://shared.ydstatic.com/images/favicon.ico"></img>
           <h4>哔哩哔哩</h4>
       </a>
   </div>
-      </div>
+         <div class="col-4 col-s-3 col-m-2">
+            <img src="imgs/带加号的文件夹.png" style="display:block ;">
+            <h4>添加网站</h4>
+            <p style="color:white ;font-size: 80px;display:none;">+</p>
+        </a>
+         </div>
+         </div>
       </section>
+      <div id="addInfo" style="display: none;">
+        <div id="title">
+         添加快捷方式
+          <!-- <span><a id="closeBtn" href="javascript:void(0);" class="close-login">关闭</a></span> -->
+        </div>
+        <div class="addInfo-input-content">
+          <div class="name-input">
+            <label>网址</label>
+            <input
+              type="text"
+              name="info[username]"
+              id="username"
+            />          
+            <!-- <div id="underline"></div> -->
+          </div>
+          <div class="URL-input">
+            <label>名称</label>
+            <input
+              type="text"
+              name="info[username]"
+              id="username"
+              />
+            <!-- <div id="underline"></div> -->
+          </div>
+        </div>
+       
+      <div class="btn"> 
+        <div id="addBtn" >
+          <a href="javascript:void(0);" ;
+          ><button>完成</button></a>
+        </div>
+        <div id="cancelBtn" style="margin-right: .5rem;">
+          <a href="javascript:void(0);" ><button>取消</button></a>
+        </div>
+       
+      </div>
+      </div>
+      <div class="bg" style="display: none;"></div>
       <!--  -->
     </main>
     <!-- main -->
@@ -252,6 +297,7 @@
       <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=110 src="http://music.163.com/outchain/player?type=4&id=958796159&auto=0&height=90"></iframe>
     </div>
 
+   
     <script type="text/javascript">
       var b=document.body;
       var h=new Date().getHours();
@@ -305,9 +351,9 @@
         if(fen<10){
           fen="0"+fen;
         }
-        console.log(miao);
+        // console.log(miao);
         time.innerHTML=arr[day]+"   "+hh+"    :   "+fen+"    :    "+miao;
-        setTimeout("showtime()",1000);
+        setTimeout(showtime,1000);
       }
       showtime();
 
@@ -315,5 +361,111 @@
     
   
     </script>
+    <script>
+      var par=document.querySelector('.list').querySelector('.row');
+     
+      var add=par.children;
+      add=add[add.length-1];
+      console.log(add);
+
+      if (new Date().getHours()>18) {
+        add.children[0].style.display='none';
+        add.children[2].style.display='block';
+      console.log(add.children[2].style.display);
+      }else{
+        add.children[0].style.display='block';
+        add.children[2].style.display='none';
+      }
+      var div=document.createElement('div');
+      div.className='col-4 col-s-3 col-m-2';
+      var a=document.createElement('a');
+       var img=document.createElement('img');
+       var h4=document.createElement('h4');
+
+       div.appendChild(a);
+       a.appendChild(img);
+       a.appendChild(h4);
+       add.addEventListener('click',as);
+       function as() {
+         var addInfo=document.querySelector('#addInfo');
+         var btns=addInfo.querySelectorAll('button');
+         var inputs=addInfo.querySelectorAll('input');
+         
+         addInfo.nextElementSibling.style.display='block';
+         addInfo.style.display='block';
+         
+         addInfo.addEventListener('mousedown',function (e) {
+          var x=e.pageX-addInfo.offsetLeft;
+          var y=e.pageY-addInfo.offsetTop;
+          var move_mouse=function (e) {
+            addInfo.style.left=e.pageX-x+"px";
+            addInfo.style.top=e.pageY-y+"px";
+          }
+          document.addEventListener('mousemove',move_mouse)
+          document.addEventListener('mouseup',function () {
+          document.removeEventListener('mousemove',move_mouse)
+        })
+         })
+         
+        btns[0].addEventListener('mouseover',function () {
+          if(inputs[0].value!='' && inputs[1].value!=''){
+              btns[0].style.backgroundColor='white';
+              btns[0].style.color='rgb(26, 115, 232)';
+            }
+        })
+        btns[0].addEventListener('mouseout',function () {
+          if(inputs[0].value!='' && inputs[1].value!=''){
+              btns[0].style.backgroundColor='#f1f3f4';
+              btns[0].style.color='#80868b';
+            }
+        })
+         btns[0].addEventListener('click',function () {
+
+         
+
+          a.href="http://"+inputs[0].value+"/";
+          img.src=a.href+'favicon.ico';
+          h4.innerHTML=inputs[1].value;
+          par.insertBefore(div,add);
+          
+          addInfo.nextElementSibling.style.display='none';
+          input[0].value='';
+          input[1].value='';
+          addInfo.style.display='none';
+         })
+         btns[1].addEventListener('click',function () {
+          addInfo.nextElementSibling.style.display='none';
+          addInfo.style.display='none';
+         })
+       } 
+       document.addEventListener('keyup',function (e) {
+        if(e.key==='n'){
+          as();
+        }
+      })
+     
+      
+      var first=par.children[0];
+      console.dir(first.children[0]);
+      a.addEventListener('click',function () {
+        location.replace("https://dongmanhuayuan.myheartsite.com/");
+      })
+    </script>
+    <script>
+      const content=document.querySelector('#addInfo').querySelector('.addInfo-input-content');
+      const input=content.querySelectorAll('input');
+      const labels=content.querySelectorAll('label')
+      console.log(input);
+      for (let index = 0; index < input.length; index++) {
+        input[index].addEventListener('focus',function () {
+          labels[index].style.color='rgb(26, 115, 232)';
+        })
+        input[index].addEventListener('blur' ,function () {
+          labels[index].style.color='#5f6368';
+        })
+       
+      }
+    </script>
+    <!-- <img src="imgs/带加号的文件夹.png" alt="" style="width: 30px;height: 30px;top: 90px;position: absolute;" id="imgs"> -->
     </body>
 </html>
