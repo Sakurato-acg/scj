@@ -13,6 +13,9 @@
     <!-- <link rel="stylesheet" href="bootstrap/css/bootstrap.css"> -->
     <!-- <script src="js/flexible.js"></script> -->
     <script src="js/move.js"></script>
+    <script src="js/URL_info.js"></script>
+    <script src="js/remove.js"></script>
+
   </head>
   <body>
     <header  class="">
@@ -27,8 +30,8 @@
       </div>
       <nav class="head-menu hidden-xs">
         <div class="has-child">
-          <a href="https://paul.ren/" data-paul-state=""
-            ><i class="fa fa-home"></i>保罗</a
+          <a href="index.html" data-paul-state=""
+            ><i class="fa fa-home"></i>主页</a
           >
           <!-- <div class="sub-menu">
             <a
@@ -52,8 +55,8 @@
           </div> -->
         </div>
         <div class="has-child">
-          <a href="https://paul.ren/note" data-paul-state=""
-            ><i class="fa fa-book"></i>笔记</a
+          <a href="todolist.html" data-paul-state=""
+            ><i class="fa fa-book"></i>待办事项</a
           >
           <!-- <div class="sub-menu">
             <a
@@ -143,9 +146,10 @@
           <!-- NO.1 -->
           <div class="col-4 col-s-3 col-m-2">
               <a href="https://dongmanhuayuan.myheartsite.com/" data-paul-state="">
-          <img src="upload/1.png">
-          <h4>动漫花园资源网</h4>
-      </a>
+                <img src="upload/1.png">
+                <h4>动漫花园资源网</h4> 
+              </a> 
+              <i class="fa fa-times"></i>
         </div>
           <!-- NO.2 -->
           <div class="col-4 col-s-3 col-m-2">
@@ -153,13 +157,15 @@
           <img src="upload/mnbk.png" style="size :50% 50%">
           <h4>萌娘百科</h4>
       </a>
+      <i class="fa fa-times"></i>
   </div>
           <!-- NO.3 -->
           <div class="col-4 col-s-3 col-m-2">
       <a href="http://orion-origin.ysepan.com/" data-paul-state="">
           <img src="upload/发布组.png">
           <h4>不会鸽的发布组</h4>
-      </a>
+      </a> 
+      <i class="fa fa-times"></i>
   </div>
           <!-- NO.4 -->
           <div class="col-4 col-s-3 col-m-2">
@@ -167,6 +173,7 @@
           <img src="upload/量子ACG.png" style="background: size 90px 90px;">
           <h4>量子ACG</h4>
       </a>
+      <i class="fa fa-times"></i>
   </div>
           <!-- NO.5 -->
           <div class="col-4 col-s-3 col-m-2">
@@ -174,48 +181,55 @@
           <img src="upload/ACG大芒果.webp">
           <h4>ACG大芒果</h4>
       </a>
+      <i class="fa fa-times"></i>
   </div>
           <!-- NO.6 -->
           <div class="col-4 col-s-3 col-m-2">
       <a href="http://206.190.234.25" data-paul-state="">
           <img src="upload/edd.png">
           <h4>EDD动漫</h4>
-      </a>
+        </a>
+        <i class="fa fa-times"></i>
   </div>
           <!-- NO.7 -->
           <div class="col-4 col-s-3 col-m-2">
       <a href="https://jixia.ink/" data-paul-state="">
           <img src="upload/极下.png">
           <h4>极下</h4>
-      </a>
+        </a>
+        <i class="fa fa-times"></i>
   </div>
           <!-- NO.8 -->
           <div class="col-4 col-s-3 col-m-2">
       <a href="http://acm.zufedfc.edu.cn/" data-paul-state="">
           <img src="upload/ntpicon.png">
           <h4> OJ </h4>
-      </a>
+        </a>
+        <i class="fa fa-times"></i>
   </div>
           <!-- NO.9 -->
           <div class="col-4 col-s-3 col-m-2">
       <a href="https://www.moehui.com/" data-paul-state="">
           <img src="upload/萌绘.png">
           <h4>萌绘</h4>
-      </a>
+        </a>
+        <i class="fa fa-times"></i>
   </div>
           <!-- NO.10 -->
           <div class="col-4 col-s-3 col-m-2">
       <a href="https://www.pixiv.net/" data-paul-state="">
           <img src="upload/pixiv.png">
           <h4>pixiv</h4>
-      </a>
+        </a>
+        <i class="fa fa-times"></i>
   </div>
           <!-- NO.11 -->
           <div class="col-4 col-s-3 col-m-2">
       <a href="https://bangumi.tv/subject/307921" data-paul-state="">
           <img src="upload/bangumi.png">
           <h4>bangumi</h4>
-      </a>
+        </a>
+        <i class="fa fa-times"></i>
   </div>
           <!-- NO.12 -->
           <div class="col-4 col-s-3 col-m-2">
@@ -223,7 +237,8 @@
           <!-- <img src="upload/bilibili.png"> -->
           <img src="http://shared.ydstatic.com/images/favicon.ico"></img>
           <h4>哔哩哔哩</h4>
-      </a>
+        </a>
+        <i class="fa fa-times"></i>
   </div>
          <div class="col-4 col-s-3 col-m-2">
             <img src="imgs/带加号的文件夹.png" style="display:block ;">
@@ -299,159 +314,8 @@
     </div>
 
    
-    <script type="text/javascript">
-      var b=document.body;
-      var h=new Date().getHours();
-      var head=document.querySelector('header');
-      var time=document.getElementById('time');
-      console.dir(b);
-      console.dir(head);
-      console.dir(time);
-      
-      var alist=document.querySelectorAll('main .change');
-
-      function changeCss(obj){
-        console.log(alist);
-        for(var i=0 ; i<alist.length;i++){
-          alist[i].style.backgroundColor='inherit';
-        }
-        obj.style.backgroundColor='#ffc107';
-        // obj.style.color='white'
-      }
-
-      function leave(obj) {
-        console.dir("11"+alist[0]);
-        for(var i=0 ; i<alist.length;i++){
-          alist[i].style.backgroundColor='';
-        }
-        alist[0].style.backgroundColor='#28b9be';
-      }
-      if (h>18) {
-        b.style.backgroundImage="url(imgs/background-night.png)"
-        head.style.backgroundColor="#373737";
-      }
-      else{
-        b.style.backgroundImage="url(imgs/background-light.png)"
-        head.style.backgroundColor="#fff";
-      }
-
-      function showtime() {
-        var date = new Date();
-        // 我们写一个 2019年 5月 1日 星期三
-        var arr = ['星期日', '星期一', '星期二', '星期三', '星期四', '星期五', '星期六'];
-        var day = date.getDay();
-        var hh=date.getHours();
-        var fen=date.getMinutes();
-        var miao=date.getSeconds();
-        if(miao<10){
-          miao="0"+miao;
-        }
-        if(hh<10){
-          hh="0"+hh;
-        }
-        if(fen<10){
-          fen="0"+fen;
-        }
-        // console.log(miao);
-        time.innerHTML=arr[day]+"   "+hh+"    :   "+fen+"    :    "+miao;
-        setTimeout(showtime,1000);
-      }
-      showtime();
-
-  
-    
-  
-    </script>
-    <script>
-      var par=document.querySelector('.list').querySelector('.row');
-     
-      var add=par.children;
-      add=add[add.length-1];
-      console.log(add);
-
-      if (new Date().getHours()>18) {
-        add.children[0].style.display='none';
-        add.children[2].style.display='block';
-      console.log(add.children[2].style.display);
-      }else{
-        add.children[0].style.display='block';
-        add.children[2].style.display='none';
-      }
-      var div=document.createElement('div');
-      div.className='col-4 col-s-3 col-m-2';
-      var a=document.createElement('a');
-       var img=document.createElement('img');
-       var h4=document.createElement('h4');
-
-       div.appendChild(a);
-       a.appendChild(img);
-       a.appendChild(h4);
-       add.addEventListener('click',as);
-       function as() {
-         var addInfo=document.querySelector('#addInfo');
-         var btns=addInfo.querySelectorAll('button');
-         var inputs=addInfo.querySelectorAll('input');
-         
-         addInfo.nextElementSibling.style.display='block';
-         addInfo.style.display='block';
-         
-         addInfo.addEventListener('mousedown',function (e) {
-          var x=e.pageX-addInfo.offsetLeft;
-          var y=e.pageY-addInfo.offsetTop;
-          var move_mouse=function (e) {
-            addInfo.style.left=e.pageX-x+"px";
-            addInfo.style.top=e.pageY-y+"px";
-          }
-          document.addEventListener('mousemove',move_mouse)
-          document.addEventListener('mouseup',function () {
-          document.removeEventListener('mousemove',move_mouse)
-        })
-         })
-         
-        btns[0].addEventListener('mouseover',function () {
-          if(inputs[0].value!='' && inputs[1].value!=''){
-              btns[0].style.backgroundColor='white';
-              btns[0].style.color='rgb(26, 115, 232)';
-            }
-        })
-        btns[0].addEventListener('mouseout',function () {
-          if(inputs[0].value!='' && inputs[1].value!=''){
-              btns[0].style.backgroundColor='#f1f3f4';
-              btns[0].style.color='#80868b';
-            }
-        })
-         btns[0].addEventListener('click',function () {
-
-         
-
-          a.href="http://"+inputs[0].value+"/";
-          img.src=a.href+'favicon.ico';
-          h4.innerHTML=inputs[1].value;
-          par.insertBefore(div,add);
-          
-          addInfo.nextElementSibling.style.display='none';
-          input[0].value='';
-          input[1].value='';
-          addInfo.style.display='none';
-         })
-         btns[1].addEventListener('click',function () {
-          addInfo.nextElementSibling.style.display='none';
-          addInfo.style.display='none';
-         })
-       } 
-       document.addEventListener('keyup',function (e) {
-        if(e.key==='n'){
-          as();
-        }
-      })
-     
-      
-      var first=par.children[0];
-      console.dir(first.children[0]);
-      a.addEventListener('click',function () {
-        location.replace("https://dongmanhuayuan.myheartsite.com/");
-      })
-    </script>
+   
+    <script src="js/change.js"></script>
     <script>
       const content=document.querySelector('#addInfo').querySelector('.addInfo-input-content');
       const input=content.querySelectorAll('input');

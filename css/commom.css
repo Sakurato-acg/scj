@@ -7,10 +7,12 @@
 
 html {
   font-size: 16px;
+  /* min-width: 300px; */
 }
 body {
   position: relative;
   display: flex;
+
   min-height: 100%;
   padding-top: 4rem;
   flex-direction: column;
@@ -50,6 +52,7 @@ header {
   height: 4rem;
   /* background-color: #373737; */
   background-color: #fff;
+  border-bottom: 0.1px solid rgba(0, 0, 0, 0.2);
 }
 .head-logo {
   height: 100%;

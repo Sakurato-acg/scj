@@ -48,7 +48,19 @@ main .list .row > [class*="col-"] {
   padding: 0 1rem;
 }
 main .list .row div {
+  position: relative;
   transition: all 0.3s;
+}
+main .list .row div i {
+  position: absolute;
+  display: none;
+  right: 1.25rem;
+  top: 0;
+  color: crimson;
+  font-size: 1.5625rem;
+}
+main .list .row :hover i {
+  display: block;
 }
 main .list .row div:hover {
   margin-top: -1.25rem;
