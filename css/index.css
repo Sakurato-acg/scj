@@ -142,6 +142,11 @@ main #addInfo .btn #cancelBtn a button {
   border-radius: 4px;
   padding: 0.5rem 1rem;
 }
+@media screen and (max-width: 600px) {
+  main #addInfo {
+    width: 90%;
+  }
+}
 main .bg {
   position: fixed;
   left: 0;

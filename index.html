@@ -15,10 +15,13 @@
     <script src="js/move.js"></script>
     <script src="js/URL_info.js"></script>
     <script src="js/remove.js"></script>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/anime.js"></script>
+
 
   </head>
   <body>
-    <header  class="">
+    <header  class="index_header">
       <div class="head-toggle"></div>
       <div class="head-logo ">
         <svg viewBox="0 0 200 200">
@@ -111,8 +114,8 @@
             <a href="https://paul.ren/bangumi" data-paul-state="">番剧</a>
             <a href="https://paul.ren/bag" data-paul-state="">装备</a>
             <a href="https://paul.ren/toy" data-paul-state="">手办</a>
-          </div>
-        </div> -->
+          </div> -->
+        </div>
       </nav>
       <nav class="head-social">
         <a
@@ -130,6 +133,37 @@
         ></a>
       </nav>
     </header>
+
+    <!-- head-list -->
+    <div class="head-list">
+      <a href="index.html"><i class="fa fa-home"></i>主页</a>
+      <div class="nav_list">
+              <a href="#">关于我</a>
+              <a href="#">赞助我</a>
+              <a href="#">心愿</a>
+      </div>
+      <a href="todolist.html"><i class="fa fa-book"></i>待办事项</a>
+      <div class="nav_list">
+        <a href="#">日记</a>
+        <a href="#">博客</a>
+        <a href="#">语录</a>
+      </div>
+      <a href="https://paul.ren/gallery"><i class="fa fa-image"></i>相册</a>
+      <a href="https://paul.ren/project"><i class="fa fa-flask"></i>项目</a>
+      <div class="nav_list">
+        <a href="#">网站</a>
+        <a href="#">软件</a>
+      </div>
+      <a href="https://paul.ren/music"><i class="fa fa-star"></i>收藏</a>
+      <div class="nav_list">
+        <a href="#">歌单</a>
+        <a href="#">番剧</a>
+        <a href="#">装备</a>
+        <a href="#">手办</a>
+      </div>
+        
+    </div>
+    <!-- over -->
     <!-- main -->
     <main>
       <div id="time">
@@ -312,9 +346,6 @@
     <div class="music">
       <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=110 src="http://music.163.com/outchain/player?type=4&id=958796159&auto=0&height=90"></iframe>
     </div>
-
-   
-   
     <script src="js/change.js"></script>
     <script>
       const content=document.querySelector('#addInfo').querySelector('.addInfo-input-content');
@@ -331,6 +362,7 @@
        
       }
     </script>
+
     <!-- <img src="imgs/带加号的文件夹.png" alt="" style="width: 30px;height: 30px;top: 90px;position: absolute;" id="imgs"> -->
     </body>
 </html>

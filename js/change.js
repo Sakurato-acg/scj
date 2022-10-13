@@ -9,7 +9,7 @@ console.dir(time);
 var alist = document.querySelectorAll("main .change");
 
 function changeCss(obj) {
-  console.log(alist);
+  // console.log(alist);
   for (var i = 0; i < alist.length; i++) {
     alist[i].style.backgroundColor = "inherit";
   }
