@@ -210,8 +210,19 @@ footer::before {
 }
 .music {
   position: fixed;
-  bottom: 10vh;
+  bottom: 20vh;
   right: 0;
-  width: 19.375rem;
-  height: 6.875rem;
+  width: 18.375rem;
+  height: 6.2rem;
+  overflow: hidden;
+}
+.music #btn {
+  position: absolute;
+  right: 1.1875rem;
+  top: 5.125rem;
+  width: 0.8125rem;
+  height: 0.625rem;
+  background: url(../imgs/music.png) no-repeat 0 9999px;
+  cursor: pointer;
+  background-position: -58px -14px;
 }
