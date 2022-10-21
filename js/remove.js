@@ -22,8 +22,8 @@ document.addEventListener("DOMContentLoaded", function () {
       var data = getdata();
       data.forEach(function (item, index, data) {
         if (
-          item.url === upload.url &&
-          item.img_src === upload.img_src &&
+          item.url === upload.url ||
+          item.img_src === upload.img_src ||
           item.uname === upload.uname
         ) {
           data.splice(index, 1);
