@@ -210,9 +210,9 @@ footer::before {
 }
 .music {
   position: fixed;
-  bottom: 20vh;
+  bottom: 11vh;
   right: 0;
-  width: 18.375rem;
+  width: 16.375rem;
   height: 6.2rem;
   overflow: hidden;
 }
